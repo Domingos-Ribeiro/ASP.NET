@@ -100,8 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\Clientes1Controller.cs" />
-    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\EquipasController.cs" />
+    <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="DAL\EquipasMembrosContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -114,8 +114,12 @@
     <Compile Include="Migrations\202104161056489_morada.Designer.cs">
       <DependentUpon>202104161056489_morada.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104191310198_equipa.cs" />
+    <Compile Include="Migrations\202104191310198_equipa.Designer.cs">
+      <DependentUpon>202104191310198_equipa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Equipa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +137,12 @@
     <Content Include="Views\Clientes1\Details.cshtml" />
     <Content Include="Views\Clientes1\Edit.cshtml" />
     <Content Include="Views\Clientes1\Index.cshtml" />
+    <Content Include="Views\Equipas\Create.cshtml" />
+    <Content Include="Views\Equipas\Delete.cshtml" />
+    <Content Include="Views\Equipas\Details.cshtml" />
+    <Content Include="Views\Equipas\Edit.cshtml" />
+    <Content Include="Views\Equipas\Index.cshtml" />
+    <Content Include="Views\Inicio\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104161056489_morada.resx">
       <DependentUpon>202104161056489_morada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104191310198_equipa.resx">
+      <DependentUpon>202104191310198_equipa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

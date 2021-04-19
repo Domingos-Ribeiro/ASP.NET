@@ -11,107 +11,107 @@ using EquipasMembros.Models;
 
 namespace EquipasMembros.Controllers
 {
-    public class Clientes1Controller : Controller
+    public class EquipasController : Controller
     {
         private EquipasMembrosContext db = new EquipasMembrosContext();
 
-        // GET: Clientes1
+        // GET: Equipas
         public ActionResult Index()
         {
-            return View(db.Clientes.ToList());
+            return View(db.Equipas.ToList());
         }
 
-        // GET: Clientes1/Details/5
+        // GET: Equipas/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Cliente cliente = db.Clientes.Find(id);
-            if (cliente == null)
+            Equipa equipa = db.Equipas.Find(id);
+            if (equipa == null)
             {
                 return HttpNotFound();
             }
-            return View(cliente);
+            return View(equipa);
         }
 
-        // GET: Clientes1/Create
+        // GET: Equipas/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Clientes1/Create
+        // POST: Equipas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nome,Telefone,Morada")] Cliente cliente)
+        public ActionResult Create([Bind(Include = "Id,NomeEquipa")] Equipa equipa)
         {
             if (ModelState.IsValid)
             {
-                db.Clientes.Add(cliente);
+                db.Equipas.Add(equipa);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(cliente);
+            return View(equipa);
         }
 
-        // GET: Clientes1/Edit/5
+        // GET: Equipas/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Cliente cliente = db.Clientes.Find(id);
-            if (cliente == null)
+            Equipa equipa = db.Equipas.Find(id);
+            if (equipa == null)
             {
                 return HttpNotFound();
             }
-            return View(cliente);
+            return View(equipa);
         }
 
-        // POST: Clientes1/Edit/5
+        // POST: Equipas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nome,Telefone,Morada")] Cliente cliente)
+        public ActionResult Edit([Bind(Include = "Id,NomeEquipa")] Equipa equipa)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(cliente).State = EntityState.Modified;
+                db.Entry(equipa).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(cliente);
+            return View(equipa);
         }
 
-        // GET: Clientes1/Delete/5
+        // GET: Equipas/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Cliente cliente = db.Clientes.Find(id);
-            if (cliente == null)
+            Equipa equipa = db.Equipas.Find(id);
+            if (equipa == null)
             {
                 return HttpNotFound();
             }
-            return View(cliente);
+            return View(equipa);
         }
 
-        // POST: Clientes1/Delete/5
+        // POST: Equipas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Cliente cliente = db.Clientes.Find(id);
-            db.Clientes.Remove(cliente);
+            Equipa equipa = db.Equipas.Find(id);
+            db.Equipas.Remove(equipa);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

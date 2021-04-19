@@ -5,11 +5,9 @@ using System.Web;
 
 namespace EquipasMembros.Models
 {
-    public class Cliente
+    public class Equipa
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Telefone { get; set; }
-        public string Morada { get; set; }
+        public string NomeEquipa { get; set; }
     }
 }

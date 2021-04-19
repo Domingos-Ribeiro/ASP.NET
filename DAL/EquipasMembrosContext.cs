@@ -9,6 +9,6 @@ namespace EquipasMembros.DAL
 {
     public class EquipasMembrosContext : DbContext
     {
-        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Equipa> Equipas { get; set; }
     }
 }
