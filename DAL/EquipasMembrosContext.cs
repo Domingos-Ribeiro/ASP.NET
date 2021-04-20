@@ -9,6 +9,8 @@ namespace EquipasMembros.DAL
 {
     public class EquipasMembrosContext : DbContext
     {
+        // Dá origem às Tabelas Equipas e Membros
         public DbSet<Equipa> Equipas { get; set; }
+        public DbSet<Membro> Membros { get; set; }
     }
 }

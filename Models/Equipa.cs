@@ -9,5 +9,8 @@ namespace EquipasMembros.Models
     {
         public int Id { get; set; }
         public string NomeEquipa { get; set; }
+
+        // Cada equipa pode ter uma coleção de membros:
+        public virtual ICollection<Membro> Membros { get; set; }
     }
 }

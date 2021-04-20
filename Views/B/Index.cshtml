@@ -1,0 +1,19 @@
+﻿@using EquipasMembros.Models
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var item in (List<Equipa>)ViewBag.ListaDasEquipas)
+{
+    @item.NomeEquipa
+    <br>
+}
+
+<h4>Listar todos os Membros</h4>
+@foreach (var item in (List<Membro>)ViewBag.Membros)
+{
+    @item.NomeMembro@:&nbsp-
+}
