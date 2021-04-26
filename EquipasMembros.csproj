@@ -101,6 +101,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BController.cs" />
+    <Compile Include="Controllers\CController.cs" />
     <Compile Include="Controllers\EquipasController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\MembroesController.cs" />
@@ -165,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\C\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104160933170_Init.resx">
