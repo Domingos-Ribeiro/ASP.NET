@@ -16,7 +16,7 @@ namespace EquipasMembros.Controllers
         // Levar os nomes daqui para a view
         EquipasMembrosContext pointer = new EquipasMembrosContext();
         // GET: B
-        public ActionResult Index()
+        public ActionResult Index() 
         {
             List<Equipa> lst = new List<Equipa>();
             lst = pointer.Equipas.ToList();

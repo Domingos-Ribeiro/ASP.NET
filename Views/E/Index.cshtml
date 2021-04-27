@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@model EquipasMembros.ViewModel.EquipaMembros
+<br />
+<h5>
+    Este Controller, lista as equipas (Class modelo Equipa) e os respectivos membros (Class modelo Membro), sem utilizar as tabelas.<br>
+    O propósito é entender os ciclos antes de adicionar HTML...
+</h5>
+<hr />
+
+
+@foreach (var item in Model.Equipas)
+{
+    @item.Id <b> <label>|</label> @item.NomeEquipa </b><label>:</label>
+
+    foreach (var subitem in item.Membros)
+    {
+        <label> - </label> @subitem.NomeMembro
+
+    }
+    <br />
+}
+

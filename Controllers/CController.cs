@@ -15,8 +15,8 @@ namespace EquipasMembros.Controllers
         public ActionResult Index()
         {
             // Preparação da drop 1 com as Equipas:
-            List<Equipas> listaDasEquipas = new List<Equipa>();
-            listaDasEquipas = dbPointer.Equipas.ToList();
+            //List<Equipas> listaDasEquipas = new List<Equipa>();
+            //listaDasEquipas = dbPointer.Equipas.ToList();
 
             return View();
         }
