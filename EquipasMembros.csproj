@@ -100,8 +100,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AController.cs" />
     <Compile Include="Controllers\BController.cs" />
     <Compile Include="Controllers\CController.cs" />
+    <Compile Include="Controllers\DController.cs" />
     <Compile Include="Controllers\EController.cs" />
     <Compile Include="Controllers\EquipasController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
@@ -161,6 +163,8 @@
     <Content Include="Views\Membroes\Index.cshtml" />
     <Content Include="Views\E\Index.cshtml" />
     <Content Include="Views\C\Index.cshtml" />
+    <Content Include="Views\D\Index.cshtml" />
+    <Content Include="Views\A\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*Mostrar a LISTA simples, sem DropDown usando o ciclo Foreach*@
+
+<h4>Lista Simples</h4>
+
+@foreach (var item in (List<string>)ViewBag.LISTA)
+{
+    @item
+    <br />
+}
+
+<hr />
+
+@*Mostrar a LISTA usando uma DropDown*@
+
+<h4>Com DropDown</h4>
+@Html.DropDownList("sdfsdfsdf", (SelectList)ViewBag.SELECTLIST, "Escolha uma Equipa")

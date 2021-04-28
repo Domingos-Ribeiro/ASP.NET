@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    
+    @Html.DropDownList("codigoClicado", (SelectList)ViewBag.SEL, "Selecione uma Equipa")
+    <input type="submit" value="VERIFICAR CÓDIGO DA EQUIPA" />
+    <br />
+    <br />
+}
+
+@ViewBag.CODIGOCLICADO
