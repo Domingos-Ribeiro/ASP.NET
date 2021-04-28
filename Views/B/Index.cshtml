@@ -6,14 +6,18 @@
 
 <h2>Index</h2>
 
+<h4>Listagem das Equipas</h4>
+
 @foreach (var item in (List<Equipa>)ViewBag.ListaDasEquipas)
 {
     @item.NomeEquipa
-    <br>
+<br />
 }
+
+<hr />
 
 <h4>Listagem dos Membros Atuais</h4>
 @foreach (var item in (List<Membro>)ViewBag.Membros)
 {
-    @item.NomeMembro@:&nbsp-
+    @:&nbsp- @item.NomeMembro
 }

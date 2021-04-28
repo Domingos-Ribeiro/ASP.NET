@@ -160,6 +160,7 @@
     <Content Include="Views\Membroes\Edit.cshtml" />
     <Content Include="Views\Membroes\Index.cshtml" />
     <Content Include="Views\E\Index.cshtml" />
+    <Content Include="Views\C\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -169,7 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\C\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104160933170_Init.resx">

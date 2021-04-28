@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<br />
+@*<h4>
+    Mostra as equipas (classe modelo membro) numa drop;<br />
+    Mostra os membros (classe modelo membro) noutra drop;<br />
+    As drops são independentes, não estão sincronizadas.
+</h4>*@
+<br />
+
+<h4>DropDowns independentes com as Equipas e os Membros.</h4>
+@Html.DropDownList("drop1", (SelectList)ViewBag.EQUIPAS) <----------------------------------------------------></---------------------------------------------------->
+
+@Html.DropDownList("drop2", (SelectList)ViewBag.MEMBROS)

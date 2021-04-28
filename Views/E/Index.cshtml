@@ -6,12 +6,14 @@
 
 @model EquipasMembros.ViewModel.EquipaMembros
 <br />
-<h5>
-    Este Controller, lista as equipas (Class modelo Equipa) e os respectivos membros (Class modelo Membro), sem utilizar as tabelas.<br>
-    O propósito é entender os ciclos antes de adicionar HTML...
-</h5>
-<hr />
+@*<h5>
+        Este Controller, lista as equipas (Class modelo Equipa) e os respectivos membros (Class modelo Membro), sem utilizar as tabelas.<br>
+        O propósito é entender os ciclos antes de adicionar HTML...
+    </h5>
+    <hr />*@
 
+<h5><b>Id, Equipa e Respetivos Membros</b></h5>
+<hr />
 
 @foreach (var item in Model.Equipas)
 {
