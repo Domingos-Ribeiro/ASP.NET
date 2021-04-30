@@ -8,22 +8,19 @@ using EquipasMembros.ViewModel;
 
 namespace EquipasMembros.Controllers
 {
-    public class EController : Controller
+    public class FController : Controller
     {
         private EquipasMembrosContext db = new EquipasMembrosContext();
 
-        // GET: E
-        public ActionResult Index()
+        // GET: F
+        public ActionResult Index(int? id)
         {
+           
             var viewModel = new EquipaMembros();
-
             viewModel.Equipas = db.Equipas.ToList();
             viewModel.Membros = db.Membros.ToList();
 
-            // Outra forma de fazer:
-            //viewModel.Equipas =
-            //db.Equipas.Include(if => i.Membros.Select(char => char.Equipa)) ;
-
+            ViewBag.EQUIPACLICADA = id;
             return View(viewModel);
         }
     }

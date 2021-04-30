@@ -1,0 +1,41 @@
+﻿@model  EquipasMembros.ViewModel.EquipaMembros
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+<h3>View - F</h3>
+<hr />
+
+
+@foreach (var equipa in Model.Equipas)
+{
+    @equipa.NomeEquipa
+
+    @:&nbsp;
+
+    @Html.ActionLink("Clicar aqui", "Index", new { id = equipa.Id })
+
+    <br />
+}
+
+@ViewBag.EQUIPACLICADA
+
+@foreach (var membro in Model.Membros)
+{
+    if (ViewBag.EQUIPACLICADA == membro.EquipaId)
+    {
+        @membro.NomeMembro
+        @:&nbsp;
+    }
+
+}
+
+
+
+
