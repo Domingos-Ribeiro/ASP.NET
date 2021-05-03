@@ -93,7 +93,7 @@ namespace EquipasMembros.Controllers
             int numRegistos = h.Count();
             if (numRegistos == 0)
             {
-                ViewBag.H = "Não existe essa equipa";
+                ViewBag.H = "A Equipa " + sh + " não está neste campeonato.";
             }
             else if (numRegistos == 1)
             {
@@ -101,17 +101,17 @@ namespace EquipasMembros.Controllers
             }
             else
 
-                ViewBag.H = "Há mais do que uma equipa com esse nome!";
+                ViewBag.H = "Atenção, há mais do que uma equipa com esse nome! Por favor corrija este problema.";
 
-    //-----------------------------------------------------------
+            //-----------------------------------------------------------
 
             //I: Quantos membros tem a equipa 4 ?
 
+            ViewBag.I = db.Membros.Where(i => (i.EquipaId == 4)).Count();
 
 
 
-
-    //-----------------------------------------------------------
+            //-----------------------------------------------------------
 
             //J: Quantos membros tem a equipa "Bragões"?
 
@@ -122,14 +122,14 @@ namespace EquipasMembros.Controllers
             codequipa = db.Equipas.FirstOrDefault(i => i.NomeEquipa == st).Id;
 
             //Quantas vezes a chave primária é estrangeira?
-            ViewBag.J = db.Membros.Where(i => i.EquipaId == codequipa).Count();
+            ViewBag.J = "A Equipa " + st + " tem " + db.Membros.Where(i => i.EquipaId == codequipa).Count() + " membros.";
 
 
             //-----------------------------------------------------------
 
             //K: Quantos membros tem a equipa "Arsenal da Devesa"
 
-            string arsenal = "Arsenal da Devesa";
+            string arsenal = "Arcenal da Debeza";
             int codequipaArsenal;
 
             //Localizar chave primária da equipa
@@ -146,11 +146,11 @@ namespace EquipasMembros.Controllers
 
             if (codequipaArsenal == -1)
             {
-                ViewBag.K = "Equipa INEXISTENTE!";
+                ViewBag.K = "A Equipa com o nome " + arsenal + " não está neste campeonato.";
             }
             else
                 //Se existir contar os membros
-                ViewBag.K = db.Membros.Where(i => i.EquipaId == codequipaArsenal).Count();
+                @ViewBag.K = "A Equipa com o nome " + arsenal + " tem " + db.Membros.Where(i => i.EquipaId == codequipaArsenal).Count() + " membros.";
             
             return View();
         }
