@@ -1,0 +1,60 @@
+﻿@using EquipasMembros.Models;
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h3>Exercicio A - Listagem de todas as equipas</h3>
+<h3>Listar todas as equipas</h3>
+
+@foreach (var item in (List<Equipa>)ViewBag.A)
+{
+    @item.NomeEquipa <label> | </label>
+}
+
+<hr />
+<h3>Exercicio B - Quantas equipas?</h3>
+<label>@ViewBag.B</label>
+
+
+<hr />
+<h3>Exercicio C - Equipas ordenadas</h3>
+
+@foreach (var item in (List<Equipa>)ViewBag.C)
+{
+    @item.NomeEquipa <label> | </label>
+}
+
+
+<hr />
+<h3>Exercicio D - Equipas ordenadas por ordem Descendente</h3>
+
+@foreach (var item in (List<Equipa>)ViewBag.D)
+{
+    @item.NomeEquipa <label> | </label>
+}
+
+
+<hr />
+<h3>Exercicio E - Qual é a equipa nº 3?</h3>
+<label>@ViewBag.E</label>
+
+
+<hr />
+<h3>Exercicio F - Qual é a equipa nº 88?</h3>
+
+<label>@ViewBag.F</label>;
+
+
+<hr />
+<h3>Exercicio G - qual a primeira equipa?</h3>
+
+<label>@ViewBag.G</label>;
+
+
+<hr />
+<h3>Exercicio H - A equpa Portinhola existe?</h3>
+
+<label>@ViewBag.H</label>;

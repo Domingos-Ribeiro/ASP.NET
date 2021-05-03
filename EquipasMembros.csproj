@@ -107,6 +107,7 @@
     <Compile Include="Controllers\EController.cs" />
     <Compile Include="Controllers\EquipasController.cs" />
     <Compile Include="Controllers\FController.cs" />
+    <Compile Include="Controllers\IController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\JController.cs" />
     <Compile Include="Controllers\KController.cs" />
@@ -171,6 +172,7 @@
     <Content Include="Views\F\Index.cshtml" />
     <Content Include="Views\J\Index.cshtml" />
     <Content Include="Views\K\Index.cshtml" />
+    <Content Include="Views\I\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
