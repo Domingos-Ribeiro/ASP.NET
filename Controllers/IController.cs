@@ -93,11 +93,11 @@ namespace EquipasMembros.Controllers
             int numRegistos = h.Count();
             if (numRegistos == 0)
             {
-                ViewBag.H = "A Equipa " + sh + " não está neste campeonato.";
+                ViewBag.H = "A equipa " + sh + " não está neste campeonato.";
             }
             else if (numRegistos == 1)
             {
-                ViewBag.H = "Sim, existe";
+                ViewBag.H = "Sim, a equipa " + sh + " está inscrita neste campeonato.";
             }
             else
 
@@ -122,7 +122,7 @@ namespace EquipasMembros.Controllers
             codequipa = db.Equipas.FirstOrDefault(i => i.NomeEquipa == st).Id;
 
             //Quantas vezes a chave primária é estrangeira?
-            ViewBag.J = "A Equipa " + st + " tem " + db.Membros.Where(i => i.EquipaId == codequipa).Count() + " membros.";
+            ViewBag.J = "A equipa " + st + " tem " + db.Membros.Where(i => i.EquipaId == codequipa).Count() + " membros.";
 
 
             //-----------------------------------------------------------
@@ -146,11 +146,11 @@ namespace EquipasMembros.Controllers
 
             if (codequipaArsenal == -1)
             {
-                ViewBag.K = "A Equipa com o nome " + arsenal + " não está neste campeonato.";
+                ViewBag.K = "A equipa com o nome " + arsenal + " não está neste campeonato.";
             }
             else
                 //Se existir contar os membros
-                @ViewBag.K = "A Equipa com o nome " + arsenal + " tem " + db.Membros.Where(i => i.EquipaId == codequipaArsenal).Count() + " membros.";
+                @ViewBag.K = "A equipa com o nome " + arsenal + " tem " + db.Membros.Where(i => i.EquipaId == codequipaArsenal).Count() + " membros.";
             
             return View();
         }

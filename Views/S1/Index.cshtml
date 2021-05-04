@@ -1,0 +1,16 @@
+﻿@model IEnumerable<EquipasMembros.Models.Membro>
+<br />
+<br />
+
+@using(Html.BeginForm())
+{
+    @Html.TextBox("S")
+    <input type="submit" value="OK" />
+}
+
+
+@foreach (var item in Model)
+{
+    @item.NomeMembro
+}
+
