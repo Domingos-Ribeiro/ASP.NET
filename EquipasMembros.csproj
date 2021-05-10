@@ -113,6 +113,7 @@
     <Compile Include="Controllers\JController.cs" />
     <Compile Include="Controllers\KController.cs" />
     <Compile Include="Controllers\MembroesController.cs" />
+    <Compile Include="Controllers\RRController.cs" />
     <Compile Include="Controllers\S1Controller.cs" />
     <Compile Include="DAL\EquipasMembrosContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -186,6 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\RR\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104160933170_Init.resx">
