@@ -14,19 +14,19 @@ namespace EquipasMembros.Controllers
 
         EquipasMembrosContext pointer = new EquipasMembrosContext();
 
-        private string TESTE =
-                  "data source = 188.121.44.214;" +
-                  "Initial Catalog = EM;" +
-                  "User Id= bdz04;" +
-                  "Password=123.Abc.@;";
+        //private string TESTE =
+        //          "data source = 188.121.44.214;" +
+        //          "Initial Catalog = EM;" +
+        //          "User Id= bdz04;" +
+        //          "Password=123.Abc.@;";
 
-        public string TESTESQL = "";
+        //public string TesteSQL = "";
 
 
         // GET: RR
         public ActionResult Index()
         {
-
+            // Apagar Todas as Equipas Recolonizar por estas Novas Equipas
             pointer.Database.ExecuteSqlCommand("DELETE FROM Equipas;" +
                     "DBCC CHECKIDENT(Equipas, reseed, 1); " +
                     "SET IDENTITY_INSERT[dbo].[Equipas] ON;" +
@@ -37,6 +37,8 @@ namespace EquipasMembros.Controllers
                     "INSERT[dbo].[Equipas]([Id], [NomeEquipa]) VALUES (5, 'Maximinense');" +
                     "SET IDENTITY_INSERT[dbo].[Equipas] OFF;");
 
+
+            // Apagar Todas os Membros das Equipas Recolonizar por estes Novos
             pointer.Database.ExecuteSqlCommand("DELETE FROM Membroes;" +
                     "DBCC CHECKIDENT(Membroes, reseed, 1); " +
                     "SET IDENTITY_INSERT[dbo].[Membroes] ON;" +
@@ -55,14 +57,9 @@ namespace EquipasMembros.Controllers
                     "INSERT[dbo].[Membroes]([Id], [NomeMembro], [EquipaId]) VALUES (13, 'Isabelinha', 5);" +
                     "INSERT[dbo].[Membroes]([Id], [NomeMembro], [EquipaId]) VALUES (14, 'Abel', 4);" +
                     "INSERT[dbo].[Membroes]([Id], [NomeMembro], [EquipaId]) VALUES (15, 'Joana', 4);" +
+                    "INSERT[dbo].[Membroes]([Id], [NomeMembro], [EquipaId]) VALUES (16, 'Domingos', 3);" +
 
                     "SET IDENTITY_INSERT[dbo].[Membroes] OFF;");
-
-             
-
-
-
-
 
             return View();
         }
