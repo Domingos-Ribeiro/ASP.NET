@@ -113,9 +113,9 @@ namespace EquipasMembros.Controllers
 
             //-----------------------------------------------------------
 
-            //J: Quantos membros tem a equipa "Bragões"?
+            //J: Quantos membros tem a equipa "Maximinense"?
 
-            string st = "Bragões";
+            string st = "Maximinense";
             int codequipa;
 
             //Localizar a chave primaria da equipa

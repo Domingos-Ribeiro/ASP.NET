@@ -17,7 +17,8 @@
         <tr>
             <td>
                 @Html.DropDownList("idDrop",
-                (SelectList)ViewBag.LISTA, htmlAttributes: new { @class = "form-control" })
+     (SelectList)ViewBag.LISTA, "Escolher a Equipa", 
+     htmlAttributes: new { @class = "form-control", @onchange = "this.form.submit();" })
             </td>
 
             <td>
