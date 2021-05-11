@@ -14,13 +14,13 @@ namespace EquipasMembros.Controllers
 
         EquipasMembrosContext pointer = new EquipasMembrosContext();
 
-        //private string TESTE =
+        //private string Remota =
         //          "data source = 188.121.44.214;" +
         //          "Initial Catalog = EM;" +
         //          "User Id= bdz04;" +
         //          "Password=123.Abc.@;";
 
-        //public string TesteSQL = "";
+        //private string LocalSQL = "";
 
 
         // GET: RR
