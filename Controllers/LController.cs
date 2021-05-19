@@ -54,6 +54,8 @@ namespace EquipasMembros.Controllers
             //C
             ViewBag.C = pointer.Membros.Where(m => m.Equipa.NomeEquipa == "Maximinense" | m.Equipa.NomeEquipa == "Falcões do Picoto").Count();
 
+            //D
+            ViewBag.D = pointer.Membros.Where(m => m.Equipa.NomeEquipa == "Maximinense" || m.Equipa.NomeEquipa == "Falcões do Picoto").OrderBy(m => m.Id);
 
 
 
