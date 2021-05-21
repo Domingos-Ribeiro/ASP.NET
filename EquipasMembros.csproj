@@ -120,6 +120,7 @@
     <Compile Include="Controllers\S1Controller.cs" />
     <Compile Include="Controllers\S2Controller.cs" />
     <Compile Include="Controllers\S3Controller.cs" />
+    <Compile Include="Controllers\S4Controller.cs" />
     <Compile Include="DAL\EquipasMembrosContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\S4\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104160933170_Init.resx">
