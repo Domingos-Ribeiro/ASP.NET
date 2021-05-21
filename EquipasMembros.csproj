@@ -187,6 +187,7 @@
     <Content Include="Views\H\Index.cshtml" />
     <Content Include="Views\L\Index.cshtml" />
     <Content Include="Views\S2\Index.cshtml" />
+    <Content Include="Views\S3\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -196,7 +197,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\S3\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104160933170_Init.resx">
