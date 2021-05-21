@@ -118,6 +118,7 @@
     <Compile Include="Controllers\MembroesController.cs" />
     <Compile Include="Controllers\RRController.cs" />
     <Compile Include="Controllers\S1Controller.cs" />
+    <Compile Include="Controllers\S2Controller.cs" />
     <Compile Include="DAL\EquipasMembrosContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -184,6 +185,7 @@
     <Content Include="Views\RR\Index.cshtml" />
     <Content Include="Views\H\Index.cshtml" />
     <Content Include="Views\L\Index.cshtml" />
+    <Content Include="Views\S2\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
