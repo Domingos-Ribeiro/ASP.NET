@@ -17,7 +17,8 @@ namespace EquipasMembros.Controllers
 
     public class GController : Controller
     {
-        //private EquipasContext db = new EquipasContext();
+        //private EquipasContext db = new EquipasContext(); 
+        //-------- Em cima dava ERRO por faltavam os Membros, a expressão correta está em baixo.
         private EquipasMembrosContext db = new EquipasMembrosContext();
         // GET: G
         public ActionResult Index(int? id)
