@@ -1,7 +1,47 @@
-﻿
+﻿@model EquipasMembros.ViewModel.EquipaMembros
+
 @{
     ViewBag.Title = "Index";
 }
 
+
+
 <h2>Menu: G</h2>
+
+<table class="table">
+
+
+
+    @foreach (var item in Model.Equipas)
+    {
+        <tr>
+            <th>
+                <label>Equipas</label>
+            </th>
+
+        </tr>
+
+        @* A diferença para o exercicio anterior, o F, é que ao selecionar, aparece a cor verde;
+            a string selectedRow é usada para "Pintar" a <tr> recorrendo ao Bootstrap*@
+
+        string selectedRow = "";
+        if (item.Id == ViewBag.equipaclicada)
+        {
+            selectedRow = "success";
+        }
+        <tr class="@selectedRow">
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeEquipa)
+            </td>
+
+            <td>
+                @Html.ActionLink("Select", "Index", new { id = item.Id })
+            </td>
+        </tr>
+
+    }
+</table>
+
+
+@* Para colocar a linha vermelha na view:*@
 
