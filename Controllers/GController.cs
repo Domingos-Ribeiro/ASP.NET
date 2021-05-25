@@ -17,7 +17,8 @@ namespace EquipasMembros.Controllers
 
     public class GController : Controller
     {
-        private EquipaMembros db = new EquipaMembros();
+        //private EquipasContext db = new EquipasContext();
+        private EquipasMembrosContext db = new EquipasMembrosContext();
         // GET: G
         public ActionResult Index(int? id)
         {
@@ -26,9 +27,7 @@ namespace EquipasMembros.Controllers
             var viewModel = new EquipaMembros();
 
             // Leva as Equipas para a View:
-            viewModel.Equipas = 
-                db.Equipas.
-                Include(i => i.Membros.Select(c => c.Equipa));
+            viewModel.Equipas = db.Equipas.Include(i => i.Membros.Select(c => c.Equipa));
 
             // Leva os Membros para a View:
             viewModel.Membros = db.Membros;
