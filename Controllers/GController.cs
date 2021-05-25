@@ -1,13 +1,15 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using EquipasMembros.DAL;
 using EquipasMembros.Models;
 using EquipasMembros.ViewModel;
-namespace EquipasMembros.Controllers
+
+
 
 
 namespace EquipasMembros.Controllers
@@ -24,9 +26,11 @@ namespace EquipasMembros.Controllers
             var viewModel = new EquipaMembros();
 
             // Leva as Equipas para a View:
-            viewModel.Equipas = db.Equipas.Include(i => i.Membros.Select(c => c.Equipa));
+            viewModel.Equipas = 
+                db.Equipas.
+                Include(i => i.Membros.Select(c => c.Equipa));
 
-            // Leva as Equipas para a View:
+            // Leva os Membros para a View:
             viewModel.Membros = db.Membros;
 
             // Recebe a Equipa clicada via argumento e devolve á View:

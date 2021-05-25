@@ -44,4 +44,25 @@
 
 
 @* Para colocar a linha vermelha na view:*@
+<hr style="border-color:red; border-width:5px;"/>
 
+@* A outra diferença é a colocação dos membros da Equipa Selecionada
+    dentro de uma nova tabela, apenas para melhorar o visual.*@
+<table class="table">
+    <tr>
+        <th>        <label>N.º de Membro</label></th>
+        <th>        <label>Nome</label></th>
+        <th>        <label>N.º de Equipa</label></th>
+    </tr>
+
+    @foreach (var item in Model.Membros)
+    {
+        if (item.EquipaId == ViewBag.equipaclicada)
+        {
+            <tr>
+                <td>@item.Id</td> <td>@item.NomeMembro</td> <td>@item.EquipaId</td>
+            </tr>
+        }
+    }
+
+</table>
