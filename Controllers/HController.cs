@@ -55,17 +55,25 @@ namespace EquipasMembros.Controllers
 
             Equipa registo;
 
-            if (id!=-1)
+            if (id!= -1)
             {
                     registo = db.Equipas.Find(id);
                     ViewBag.EquipaSelecionada = registo.NomeEquipa.ToString();
                     ViewBag.NumeroDaEquipaSelecionada = registo.Id;
+
+                    //NOTA: A ultima linha tornada em comentário também funciona porqu a Equipa é uma class
+                    // por isso pode ser usada no "cast"
+
+                    //ViewBag.EquipaSelecionada = (Equipa)db.Equipas.Find(id);
             }
 
             else
                 {
-
+                    
+                    ViewBag.EquipaSelecionada = "";
+                    ViewBag.NumeroDaEquipaSelecionada = "";
                 }
+
             }
 
 

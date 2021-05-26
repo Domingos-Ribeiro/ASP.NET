@@ -1,7 +1,81 @@
-﻿
+﻿@model EquipasMembros.ViewModel.EquipaMembros
+
 @{
     ViewBag.Title = "Index";
 }
 
+
+
 <h2>Menu: H</h2>
 
+<table class="table">
+
+    <br />
+    <br />
+
+    <p><label>Nome das Equipas</label> &nbsp  - Clique em <label style="color:blue">Ver Membros</label> para mais detalhes.</p>
+
+    @foreach (var item in Model.Equipas)
+    {
+        @*<tr>*@
+        @*<th>*@
+        @*<label>Equipas</label>*@
+        @*</th>*@
+
+        @*</tr>*@
+
+      
+
+        string selectedRow = "";
+        if (item.Id == ViewBag.equipaclicada)
+        {
+            selectedRow = "success";
+        }
+        <tr class="@selectedRow">
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeEquipa)
+            </td>
+
+            <td>
+                @Html.ActionLink("Ver Membros", "Index", new { id = item.Id })
+            </td>
+        </tr>
+
+    }
+</table>
+
+
+@* Para colocar a linha vermelha na view:*@
+<hr style="border-color:red; border-width:5px;" />
+
+<br />
+<h4>Numero da Equipa selecionada: @ViewBag.NumeroDaEquipaSelecionada</h4>
+<h4>Equipa selecionada: @ViewBag.EquipaSelecionada</h4>
+
+<h4>Total de membros da Equipa slecionada: @ViewBag.TotalDeMembrosDaEquipa</h4>
+<h4>Total de membros (Todas as Equipas): @ViewBag.TotalDeMembros</h4>
+
+
+
+@* A outra diferença é a colocação dos membros da Equipa Selecionada
+    dentro de uma nova tabela, apenas para melhorar o visual.*@
+<table class="table">
+    <tr>
+        <th>        <label>N.º de Membro</label></th>
+        <th>        <label>Nome</label></th>
+        <th>        <label>N.º de Equipa</label></th>
+    </tr>
+
+    @foreach (var item in Model.Membros)
+    {
+        if (item.EquipaId == ViewBag.equipaclicada)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.NomeMembro</td>
+                <td>@item.EquipaId</td>
+            </tr>
+        }
+    }
+
+</table>
