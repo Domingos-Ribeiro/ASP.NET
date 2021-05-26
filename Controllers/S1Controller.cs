@@ -10,7 +10,7 @@ namespace EquipasMembros.Controllers
 {
     public class S1Controller : Controller
     {
-        EquipasMembrosContext db = new EquipasMembrosContext();
+        private EquipasMembrosContext db = new EquipasMembrosContext();
         // GET: S1
         public ActionResult Index(string S)
         {

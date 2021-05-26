@@ -55,7 +55,7 @@ namespace EquipasMembros.Controllers
 
             Equipa registo;
 
-            if (id!= -1)
+            if (id!=-1)
             {
                     registo = db.Equipas.Find(id);
                 //ViewBag.EquipaSelecionada = registo.NomeEquipa.ToString();              
