@@ -68,10 +68,10 @@ namespace EquipasMembros.Controllers
             }
 
             else
-                {
-                    ViewBag.EquipaSelecionada = "Não vi, clica outra vez";
-                    ViewBag.NumeroDaEquipaSelecionada = "Não me lembro";
-                }
+            {
+                 ViewBag.EquipaSelecionada = "Não vi, clica outra vez";
+                 ViewBag.NumeroDaEquipaSelecionada = "Não me lembro";
+            }
             //----------------------------------------------------------------------------
 
             return View(viewModel);
